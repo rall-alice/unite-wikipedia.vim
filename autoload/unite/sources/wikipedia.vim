@@ -45,7 +45,7 @@ function! unite#sources#wikipedia#define()
 endfunction
 
 function! unite#sources#wikipedia#open_wikipedia(str)
-  let l:wikiurl = s:util.#get_wiki_domain() . "/wiki/" . a:str
+  let l:wikiurl = s:util.get_wiki_domain() . "/wiki/" . a:str
   let l:run = exists('g:wikipedia_run_type') ? g:wikipedia_run_type : 'terminal'
   let l:cmd = exists('g:wikipedia_run_cmd') ? g:wikipedia_run_cmd : 'lynx'
   let l:option = exists('g:wikipedia_run_option') ? g:wikipedia_run_option : '"%s"'
